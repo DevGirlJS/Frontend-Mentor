@@ -1,0 +1,183 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(--light-gray);
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 85%;
+    font-size:1rem;
+    font-family: 'Karla', sans-serif;
+    margin:5em 0;
+}
+
+.join, .subscription, .why-us {
+    padding: 2em 1.8em 0 1.8em;
+}
+
+
+.join {
+    background-color: white;
+    padding-bottom: 2.5em;
+    border-radius: 5px 5px 0 0;
+}
+
+.join-title {
+    font-size: 1.5rem;
+    color: var(--cyan);
+    margin-bottom: 1em;
+}
+
+.join-sub-title {
+    font-size: 1.1rem;
+    color: var(--bright-yellow);
+    margin-bottom: 1.2em;
+}
+
+
+.join-text {
+    color: var(--grayish-blue);
+    line-height: 1.8;
+}
+
+
+.subscription {
+    background-color: var(--cyan);
+    padding-bottom: 1.7em;
+}
+
+.per-month  {
+    color: hsl(203, 44%, 93%, 0.5);
+    font-size: 1.1rem;
+    font-weight: 400;
+   }
+
+
+.subscription-text {
+    margin-bottom: 2.5em;
+}
+
+.suscription-title, .why-us-title,
+.subscription-text-per-month, .btn {
+    color: white;
+}
+
+.suscription-title, .why-us-title {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+}
+
+.subscription-text-per-month {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3em; 
+    justify-content: flex-start;
+    gap: 0.3em;
+}
+
+
+.btn {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--bright-yellow);
+    display: inline-block;
+    width: 100%;
+    padding: 1em 0;
+    text-align: center;
+    border-radius: 5px;
+    transition:  background-color 2s;
+}
+
+
+.why-us {
+    background-color: hsl(179, 50%, 54%);
+    padding-bottom: 1.5em;
+    border-radius: 0 0 5px 5px;
+}
+
+.why-us-list {
+    list-style: none;
+}
+
+.why-us-list-item, .subscription-text {
+    color: var(--light-gray);
+}  
+
+
+.why-us-list-item {
+    font-size: 0.875rem;
+    margin-bottom: 0.4em;
+}
+
+
+.btn:hover{
+    background-color:rgba(56, 119, 27, 0.5);
+}
+
+
+
+@media screen and (min-width:800px) {
+    .container {
+        width: 675px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        grid-template-areas: 
+        'join join join join join join'
+        'sub sub sub why why why';
+        margin: 3.5em 0;
+    }
+
+    .join {
+        grid-area: join;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .subscription {
+        grid-area: sub;
+        border-bottom-left-radius: 10px;
+    }
+
+    .why-us {
+        grid-area: why;
+        border-radius: 0 0 10px 0;
+    }
+
+    .join-sub-title {
+        margin-bottom: 0.6em;
+    }
+
+
+    .join, .subscription, .why-us {
+        padding: 3em;
+    }
+
+
+    .join{
+        padding-right: 3.8em;
+    }
+   
+
+    .subscription, .why-us  {
+        padding-bottom: 2em;
+    }
+}
